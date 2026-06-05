@@ -1,0 +1,37 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "static/images"
+public_folder: "/images"
+
+collections:
+  - name: "engel"
+    label: "Engel der Farbstrahlen"
+    folder: "content/engel"
+    create: true
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Strahl", name: "strahl", widget: "string" }
+      - { label: "Maße", name: "masse", widget: "string" }
+      - { label: "Bild", name: "image", widget: "image" }
+      - { label: "Beschreibung", name: "body", widget: "markdown", required: false }
+
+  - name: "skulpturen"
+    label: "Mandalas & Skulpturen"
+    folder: "content/skulpturen"
+    create: true
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Material", name: "material", widget: "string" }
+      - { label: "Bild", name: "image", widget: "image" }
+      - { label: "Beschreibung", name: "body", widget: "markdown", required: false }
+
+  - name: "federzeichnungen"
+    label: "Federzeichnungen"
+    folder: "content/federzeichnungen"
+    create: true
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Bild", name: "image", widget: "image" }
+      - { label: "Beschreibung", name: "body", widget: "markdown", required: false }
